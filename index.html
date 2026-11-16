@@ -145,6 +145,29 @@ header{margin-bottom:9px}
 .panel{margin-top:12px}
 @media(max-width:420px){.scene-viewport{height:min(69dvh,540px);min-height:430px}.scene-viewport .walker.w1{left:7%}.scene-viewport .walker.w2{right:7%}.scene-viewport .walker.w3{left:15%}.scene-viewport .walker.w4{right:15%}}
 @media(prefers-reduced-motion:reduce){.scene-viewport .walker{animation:none}}
+
+/* BUILD 010 — THE LIVING HEADQUARTERS: room-specific furniture and more expressive agents */
+.scene-viewport[data-room="lounge"]{background: url('./assets/lounge-furniture.svg') center 58%/100% 100% no-repeat,linear-gradient(#2b0c4e28,#240a4328),url('./assets/command-interior.svg') center/100% 100% no-repeat!important}
+.scene-viewport[data-room="briefing"]{background:url('./assets/briefing-furniture.svg') center 55%/100% 100% no-repeat,linear-gradient(#0c244655,#1e104655),url('./assets/command-interior.svg') center/100% 100% no-repeat!important}
+.scene-viewport[data-room="lounge"] .walker.w1{top:64%;left:13%}
+.scene-viewport[data-room="lounge"] .walker.w2{top:64%;right:13%}
+.scene-viewport[data-room="lounge"] .walker.w3{bottom:11%;left:24%}
+.scene-viewport[data-room="lounge"] .walker.w4{bottom:11%;right:24%}
+.scene-viewport[data-room="briefing"] .walker.w1{top:52%;left:13%}
+.scene-viewport[data-room="briefing"] .walker.w2{top:52%;right:13%}
+.scene-viewport[data-room="briefing"] .walker.w3{bottom:12%;left:20%}
+.scene-viewport[data-room="briefing"] .walker.w4{bottom:12%;right:20%}
+.scene-viewport .walker .person{transform:scale(1.6)!important;transform-origin:bottom center}
+.scene-viewport .walker .person .head{border-top-width:6px;border-radius:46% 46% 48% 48%;box-shadow:inset -3px -2px 0 #24112a24}
+.scene-viewport .walker:nth-of-type(2) .person .head{border-radius:48% 48% 35% 35%;border-top-width:9px}
+.scene-viewport .walker:nth-of-type(3) .person .head{border-top-width:3px;box-shadow:0 -5px 0 0 var(--hair,#140d23)}
+.scene-viewport .walker:nth-of-type(4) .person .head{border-radius:42%;border-top-width:7px}
+.scene-viewport .walker .person .body{background:linear-gradient(110deg,var(--coat),#27124c);border-color:#f0ce83;border-width:1px;box-shadow:inset -3px 0 0 #120e3a66}
+.scene-viewport .walker .person .body:after{content:"◆";position:absolute;left:8px;top:2px;color:#ffe3a0;font-size:8px}
+.scene-viewport .walker .walker-dot{display:none}
+.scene-viewport .walker[aria-pressed=true] .walker-label{background:#f2c965;color:#180b35;font-weight:900}
+.scene-viewport .walker:active{filter:drop-shadow(0 0 8px #ffe3a0)}
+.scene-caption{z-index:5}
 </style></head><body><main class="app">
 <header><div><div class="brand">◈ CIPHER HQ</div><div class="sub">AUTONOMOUS OPERATIONS WORLD</div></div><div class="pill">◆ PROTOTYPE</div></header>
 <section class="hero"><div class="sub">COMMAND CENTER · MOBILE EDITION</div><h1>Welcome to Headquarters</h1><div class="muted">A Wakanda-inspired, Wall Street-powered agent world. Select a workstation to inspect its mission.</div><div class="metrics"><div class="metric"><b>4</b><span>Agent stations</span></div><div class="metric"><b>0</b><span>Verified live feeds</span></div><div class="metric"><b>DEMO</b><span>Data mode</span></div></div></section>
@@ -161,7 +184,7 @@ header{margin-bottom:9px}
 </div>
 <div class="tabs" aria-label="Headquarters floors"><button data-floor="trading" aria-pressed="true">📈 Trading</button><button data-floor="revenue" aria-pressed="false">💰 Revenue</button><button data-floor="media" aria-pressed="false">🎬 Media</button><button data-floor="academy" aria-pressed="false">🧠 Academy</button></div>
 <section class="panel" aria-live="polite"><h3 id="agentTitle">Select an agent</h3><p id="agentDesc">Tap any workstation to inspect the agent's assignment, progress requirements, and connection status.</p><div id="agentTags"></div><div class="warning">Demo interface only. Agent statuses, earnings, and progress are not connected to GitHub, Railway, or broker data. No trades or business actions can be executed here.</div></section>
-<footer>CIPHER HQ · MOBILE WORLD MVP · BUILD 009 · SINGLE IMMERSIVE SCENE</footer></main>
+<footer>CIPHER HQ · MOBILE WORLD MVP · BUILD 010 · THE LIVING HEADQUARTERS</footer></main>
 <script>
 const data={
 trading:{label:"TRADING",sign:"◈ MARKET INTELLIGENCE ◈",agents:[
