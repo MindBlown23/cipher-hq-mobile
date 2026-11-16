@@ -224,6 +224,17 @@ header{margin-bottom:9px}
 .profile-skills{display:flex;flex-wrap:wrap;gap:7px}
 .profile-skills span{padding:7px;border-radius:8px;background:#47236a;border:1px solid #b38ad1;font-size:11px}
 .profile-warning{font-size:10px;margin-top:18px;border-left:3px solid #f0c96b;padding:9px;background:#f0c96b13;line-height:1.5}
+
+/* BUILD 014 — DISTINCT ILLUSTRATED AGENT IDENTITIES */
+.profile-avatar{width:150px!important;height:150px!important;border-radius:50%;overflow:hidden;padding:0!important}
+.profile-avatar svg{width:100%;height:100%;display:block}
+.portrait-controls{display:flex;justify-content:center;align-items:center;gap:8px;margin:0 0 14px}
+.portrait-controls span{font-size:10px;letter-spacing:.13em;color:#eacb8c;margin-right:5px}
+.portrait-controls button{width:40px;height:36px;border-radius:9px;background:#311452;border:1px solid #9d77bf;font-size:18px}
+.portrait-controls button[aria-pressed=true]{border:2px solid #ffda79;box-shadow:0 0 9px #f0c66e88}
+.rank-path{display:flex;flex-wrap:wrap;align-items:center;gap:5px;font-size:10px;color:#e9d1f1;line-height:1.7;padding:10px;border:1px solid #8960aa;border-radius:9px;background:#26113f}
+.rank-path span{color:#eec771;font-size:15px}
+.no-achievements{border-left:3px solid #d5a852;padding:9px;background:#d5a85212;font-size:12px!important}
 </style></head><body><main class="app">
 <header><div><div class="brand">◈ CIPHER HQ</div><div class="sub">AUTONOMOUS OPERATIONS WORLD</div></div><div class="pill">◆ PROTOTYPE</div></header>
 <section class="hero"><div class="sub">COMMAND CENTER · MOBILE EDITION</div><h1>Welcome to Headquarters</h1><div class="muted">A Wakanda-inspired, Wall Street-powered agent world. Select a workstation to inspect its mission.</div><div class="metrics"><div class="metric"><b>4</b><span>Agent stations</span></div><div class="metric"><b>0</b><span>Verified live feeds</span></div><div class="metric"><b>DEMO</b><span>Data mode</span></div></div></section>
@@ -240,8 +251,8 @@ header{margin-bottom:9px}
 </div>
 <div class="tabs" aria-label="Headquarters floors"><button data-floor="trading" aria-pressed="true">📈 Trading</button><button data-floor="revenue" aria-pressed="false">💰 Revenue</button><button data-floor="media" aria-pressed="false">🎬 Media</button><button data-floor="academy" aria-pressed="false">🧠 Academy</button></div>
 <section class="panel" aria-live="polite"><h3 id="agentTitle">Select an agent</h3><p id="agentDesc">Tap any workstation to inspect the agent's assignment, progress requirements, and connection status.</p><div id="agentTags"></div><button id="openProfile" class="profile-trigger" type="button">👤 View employee profile</button><div class="warning">Demo interface only. Agent statuses, earnings, and progress are not connected to GitHub, Railway, or broker data. No trades or business actions can be executed here.</div></section>
-<footer>CIPHER HQ · MOBILE WORLD MVP · BUILD 013 · EMPLOYEE PROFILES</footer></main>
-<dialog id="agentProfile" class="agent-profile" aria-labelledby="profileName"><div class="profile-head"><span>◆ CIPHER HQ · PERSONNEL ◆</span><button id="closeProfile" type="button" aria-label="Close employee profile">✕</button></div><div class="profile-avatar" id="profileAvatar" aria-hidden="true"></div><h2 id="profileName"></h2><p id="profileRole"></p><div class="profile-rank">LEVEL 1 · TRAINEE <small>VISUAL PLACEHOLDER — NOT VERIFIED</small></div><h3>Assigned mission</h3><p id="profileMission"></p><h3>Development focus</h3><div id="profileSkills" class="profile-skills"></div><div class="profile-warning">DEMO PROFILE · Skills, rank and accomplishments are illustrative until verified activity is connected.</div></dialog>
+<footer>CIPHER HQ · MOBILE WORLD MVP · BUILD 014 · CHARACTER IDENTITIES</footer></main>
+<dialog id="agentProfile" class="agent-profile" aria-labelledby="profileName"><div class="profile-head"><span>◆ CIPHER HQ · PERSONNEL ◆</span><button id="closeProfile" type="button" aria-label="Close employee profile">✕</button></div><div class="profile-avatar" id="profileAvatar" aria-hidden="true"></div><div class="portrait-controls"><span>UNIFORM</span><button type="button" data-uniform="purple" aria-label="Purple uniform">💜</button><button type="button" data-uniform="gold" aria-label="Gold uniform">💛</button><button type="button" data-uniform="teal" aria-label="Teal uniform">🩵</button></div><h2 id="profileName"></h2><p id="profileRole"></p><div class="profile-rank">LEVEL 1 · TRAINEE <small>DEMO RANK — NOT VERIFIED</small></div><h3>Career pathway</h3><div class="rank-path" aria-label="Illustrative promotion pathway">TRAINEE <span>›</span> SPECIALIST <span>›</span> MANAGER <span>›</span> DIRECTOR <span>›</span> VP <span>›</span> EXECUTIVE</div><h3>Verified achievements</h3><p class="no-achievements">No verified achievements connected yet. Promotions require documented results and approval.</p><h3>Assigned mission</h3><p id="profileMission"></p><h3>Development focus</h3><div id="profileSkills" class="profile-skills"></div><div class="profile-warning">DEMO PROFILE · Skills, rank and accomplishments are illustrative until verified activity is connected.</div></dialog>
 <script>
 const data={
 trading:{label:"TRADING",sign:"◈ MARKET INTELLIGENCE ◈",agents:[
@@ -269,7 +280,24 @@ const stations=document.querySelector("#stations");
 let selectedAgent=null;
 const profile=document.querySelector("#agentProfile");
 const focusMap={trading:["Market structure","Risk discipline","Backtesting"],revenue:["Lead qualification","Client communication","Fulfillment"],media:["Creative production","Quality assurance","Publishing review"],academy:["Research methods","Validation","Performance review"]};
-function openEmployeeProfile(){if(!selectedAgent)return;const a=selectedAgent;document.querySelector("#profileAvatar").textContent=a[0];document.querySelector("#profileName").textContent=a[1];document.querySelector("#profileRole").textContent=a[2]+" · "+data[currentFloor].label;document.querySelector("#profileMission").textContent=a[3];const sk=document.querySelector("#profileSkills");sk.replaceChildren();focusMap[currentFloor].forEach(s=>{const el=document.createElement("span");el.textContent=s;sk.append(el)});if(!profile.open)profile.showModal()}
+const uniformChoices={};let activeProfileKey="";
+const uniformColors={purple:["#9658c8","#5c278b"],gold:["#f1bd57","#a46b28"],teal:["#65cad0","#227a92"]};
+function portraitSVG(name,uniform){
+const names=Object.values(data).flatMap(f=>f.agents.map(a=>a[1]));
+const idx=Math.max(0,names.indexOf(name));
+const skin=["#8e573a","#b77d54","#70422f","#a66a47","#5c3428","#c18a64"][idx%6];
+const hair=["#140d23","#24121e","#100e20","#352026"][idx%4];
+const shirt=uniformColors[uniform]||uniformColors.purple;
+const hairstyles=[
+'<path d="M55 71Q51 29 96 27Q140 30 137 72L128 56Q95 46 62 61Z" fill="'+hair+'"/>',
+'<path d="M53 76Q49 20 96 24Q145 23 140 76L131 55Q95 48 62 59Z" fill="'+hair+'"/><circle cx="66" cy="30" r="15" fill="'+hair+'"/><circle cx="94" cy="22" r="17" fill="'+hair+'"/><circle cx="122" cy="32" r="15" fill="'+hair+'"/>',
+'<path d="M54 65Q60 38 98 38Q133 39 138 65L134 50Q98 39 57 54Z" fill="'+hair+'"/><path d="M58 45L73 27L90 39L107 23L126 42" fill="none" stroke="'+hair+'" stroke-width="12" stroke-linecap="round"/>',
+'<path d="M53 75Q48 30 93 26Q143 27 140 80L130 59Q92 46 61 65Z" fill="'+hair+'"/><path d="M134 64Q158 81 139 113" fill="none" stroke="'+hair+'" stroke-width="14" stroke-linecap="round"/>'
+];
+return '<svg viewBox="0 0 190 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrated employee portrait"><defs><linearGradient id="coat" x2="1" y2="1"><stop stop-color="'+shirt[0]+'"/><stop offset="1" stop-color="'+shirt[1]+'"/></linearGradient></defs><circle cx="95" cy="95" r="91" fill="#2e1552"/><circle cx="95" cy="95" r="84" fill="none" stroke="#e8bf71" stroke-width="2" opacity=".45"/><path d="M23 188Q23 129 72 124L95 143L118 124Q167 129 167 188Z" fill="url(#coat)" stroke="#edc875" stroke-width="3"/><path d="M84 123V143L95 153L106 143V123" fill="'+skin+'"/><ellipse cx="95" cy="80" rx="39" ry="49" fill="'+skin+'"/>'+hairstyles[idx%4]+'<path d="M72 82h12m22 0h12" stroke="#24101e" stroke-width="3" stroke-linecap="round"/><path d="M88 105Q95 110 102 105" fill="none" stroke="#653529" stroke-width="2"/><path d="M95 145l9 12-9 12-9-12Z" fill="#ffe39a"/><path d="M65 169h18m24 0h18" stroke="#f2d89b" stroke-width="2"/></svg>'
+}
+function openEmployeeProfile(){if(!selectedAgent)return;const a=selectedAgent;activeProfileKey=a[1];document.querySelector("#profileAvatar").innerHTML=portraitSVG(a[1],uniformChoices[a[1]]||"purple");document.querySelector("#profileName").textContent=a[1];document.querySelector("#profileRole").textContent=a[2]+" · "+data[currentFloor].label;document.querySelector("#profileMission").textContent=a[3];const sk=document.querySelector("#profileSkills");sk.replaceChildren();focusMap[currentFloor].forEach(s=>{const el=document.createElement("span");el.textContent=s;sk.append(el)});document.querySelectorAll("[data-uniform]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.uniform===(uniformChoices[a[1]]||"purple"))));if(!profile.open)profile.showModal()}
+document.querySelectorAll("[data-uniform]").forEach(b=>b.addEventListener("click",()=>{if(!activeProfileKey)return;uniformChoices[activeProfileKey]=b.dataset.uniform;document.querySelector("#profileAvatar").innerHTML=portraitSVG(activeProfileKey,b.dataset.uniform);document.querySelectorAll("[data-uniform]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)))}));
 document.querySelector("#openProfile").onclick=openEmployeeProfile;
 document.querySelector("#closeProfile").onclick=()=>profile.close();
 profile.addEventListener("click",e=>{if(e.target===profile)profile.close()});
