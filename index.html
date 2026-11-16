@@ -90,6 +90,12 @@ html,body{max-width:100%;overflow-x:hidden}.app{width:100%;overflow:hidden}.floo
 .office-door{background:linear-gradient(#1e2558,#582781);box-shadow:0 0 15px #efc96e66}
 .hero{border-color:#d3a45d;box-shadow:inset 0 0 25px #e6c36a16}
 @media(max-width:420px){.sky{height:102px}.sky:after{font-size:8px}.floor{padding-left:8px;padding-right:8px}}
+
+/* Build 007: dedicated illustrated architecture asset */
+.sky{height:180px!important;background:#140d32 url('./assets/royal-tower.svg') center 35%/cover no-repeat!important;border:3px solid #f5d280!important;box-shadow:inset 0 0 28px #f4c55b44,0 0 20px #f1bf6330!important}
+.sky:before,.sky:after{display:none!important}
+.sky .window{background:transparent!important;border:0!important;box-shadow:none!important}
+@media(max-width:420px){.sky{height:155px!important}}
 </style></head><body><main class="app">
 <header><div><div class="brand">◈ CIPHER HQ</div><div class="sub">AUTONOMOUS OPERATIONS WORLD</div></div><div class="pill">◆ PROTOTYPE</div></header>
 <section class="hero"><div class="sub">COMMAND CENTER · MOBILE EDITION</div><h1>Welcome to Headquarters</h1><div class="muted">A Wakanda-inspired, Wall Street-powered agent world. Select a workstation to inspect its mission.</div><div class="metrics"><div class="metric"><b>4</b><span>Agent stations</span></div><div class="metric"><b>0</b><span>Verified live feeds</span></div><div class="metric"><b>DEMO</b><span>Data mode</span></div></div></section>
@@ -97,7 +103,7 @@ html,body{max-width:100%;overflow-x:hidden}.app{width:100%;overflow:hidden}.floo
 <div class="floor"><div class="sky"><div class="window"></div><div class="window"></div><div class="window"></div></div><div class="sign" id="floorSign">◈ MARKET INTELLIGENCE ◈</div><div class="room-nav" id="roomNav" aria-label="Office rooms"><button data-room="work" aria-pressed="true">💻 Workstations</button><button data-room="briefing" aria-pressed="false">📋 Briefing Room</button><button data-room="lounge" aria-pressed="false">🛋️ Lounge</button></div><div class="room-scene" aria-live="polite"><span class="room-icon" id="roomIcon">💻</span><div><strong id="roomTitle">Operations Workstations</strong><small id="roomDesc">Tap a character to inspect their mission.</small></div><span class="pulse"></span></div><div class="world-note">✦ INTERACTIVE WORLD PREVIEW · ANIMATIONS ARE VISUAL ONLY</div><div class="stations" id="stations"></div><div class="office-door">◈ EXIT ◈</div><div class="office-status">SIMULATED CHARACTER MOVEMENT · TAP ANY AGENT</div><div class="room-actions"><button id="prevFloor" type="button">◀ Previous floor</button><button id="nextFloor" type="button">Next floor ▶</button></div><p class="room-note" id="roomNote">This is a visual simulation. No real meetings or work sessions are triggered.</p></div>
 <div class="tabs" aria-label="Headquarters floors"><button data-floor="trading" aria-pressed="true">📈 Trading</button><button data-floor="revenue" aria-pressed="false">💰 Revenue</button><button data-floor="media" aria-pressed="false">🎬 Media</button><button data-floor="academy" aria-pressed="false">🧠 Academy</button></div>
 <section class="panel" aria-live="polite"><h3 id="agentTitle">Select an agent</h3><p id="agentDesc">Tap any workstation to inspect the agent's assignment, progress requirements, and connection status.</p><div id="agentTags"></div><div class="warning">Demo interface only. Agent statuses, earnings, and progress are not connected to GitHub, Railway, or broker data. No trades or business actions can be executed here.</div></section>
-<footer>CIPHER HQ · MOBILE WORLD MVP · BUILD 006 · ROYAL COMMAND TOWER</footer></main>
+<footer>CIPHER HQ · MOBILE WORLD MVP · BUILD 007 · ILLUSTRATED ROYAL TOWER</footer></main>
 <script>
 const data={
 trading:{label:"TRADING",sign:"◈ MARKET INTELLIGENCE ◈",agents:[
