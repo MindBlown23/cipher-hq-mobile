@@ -168,6 +168,25 @@ header{margin-bottom:9px}
 .scene-viewport .walker[aria-pressed=true] .walker-label{background:#f2c965;color:#180b35;font-weight:900}
 .scene-viewport .walker:active{filter:drop-shadow(0 0 8px #ffe3a0)}
 .scene-caption{z-index:5}
+
+/* BUILD 011 — COUNCIL POLISH & MOBILE USABILITY */
+.scene-viewport[data-room="briefing"] .walker{animation:none!important;filter:drop-shadow(0 5px 3px #10081b);z-index:3}
+.scene-viewport[data-room="briefing"] .walker.w1{top:59%;left:7%}
+.scene-viewport[data-room="briefing"] .walker.w2{top:59%;right:7%}
+.scene-viewport[data-room="briefing"] .walker.w3{top:72%;bottom:auto;left:19%}
+.scene-viewport[data-room="briefing"] .walker.w4{top:72%;bottom:auto;right:19%}
+.scene-viewport[data-room="briefing"] .walker .person{transform:scale(1.32)!important}
+.scene-viewport[data-room="briefing"] .walker:before{content:"";position:absolute;left:8px;right:8px;bottom:15px;height:21px;border:2px solid #f5d282;border-radius:9px 9px 5px 5px;background:linear-gradient(120deg,#60277e,#a266b9);box-shadow:0 6px 0 #281044;z-index:-1}
+.scene-viewport[data-room="briefing"] .walker .walker-label{bottom:0;left:-4px;width:72px;font-size:8px;line-height:1.2;white-space:normal;overflow-wrap:anywhere;padding:2px}
+.scene-viewport[data-room="briefing"] .walker.w3 .walker-label,.scene-viewport[data-room="briefing"] .walker.w4 .walker-label{bottom:-5px}
+.scene-viewport[data-room="briefing"] .scene-caption{padding-top:34px}
+.scene-viewport .walker .walker-label{max-width:76px;overflow-wrap:anywhere}
+.scene-caption{pointer-events:none}
+.room-actions{display:flex;gap:9px;position:relative;z-index:6}
+.room-actions button{min-height:46px;border:1px solid #f5d17a;border-radius:10px;background:#301451;color:#ffe4a0;font-weight:700}
+.tabs{bottom:0;padding-bottom:max(12px,env(safe-area-inset-bottom));box-shadow:0 -8px 20px #0b061c77}
+.panel{scroll-margin-bottom:105px}
+@media(max-width:420px){.scene-viewport[data-room="briefing"] .walker.w1{left:4%}.scene-viewport[data-room="briefing"] .walker.w2{right:4%}.scene-viewport[data-room="briefing"] .walker.w3{left:17%}.scene-viewport[data-room="briefing"] .walker.w4{right:17%}.scene-viewport[data-room="briefing"] .walker .person{transform:scale(1.22)!important}.scene-viewport[data-room="briefing"] .walker.w3,.scene-viewport[data-room="briefing"] .walker.w4{top:69%}}
 </style></head><body><main class="app">
 <header><div><div class="brand">◈ CIPHER HQ</div><div class="sub">AUTONOMOUS OPERATIONS WORLD</div></div><div class="pill">◆ PROTOTYPE</div></header>
 <section class="hero"><div class="sub">COMMAND CENTER · MOBILE EDITION</div><h1>Welcome to Headquarters</h1><div class="muted">A Wakanda-inspired, Wall Street-powered agent world. Select a workstation to inspect its mission.</div><div class="metrics"><div class="metric"><b>4</b><span>Agent stations</span></div><div class="metric"><b>0</b><span>Verified live feeds</span></div><div class="metric"><b>DEMO</b><span>Data mode</span></div></div></section>
@@ -184,7 +203,7 @@ header{margin-bottom:9px}
 </div>
 <div class="tabs" aria-label="Headquarters floors"><button data-floor="trading" aria-pressed="true">📈 Trading</button><button data-floor="revenue" aria-pressed="false">💰 Revenue</button><button data-floor="media" aria-pressed="false">🎬 Media</button><button data-floor="academy" aria-pressed="false">🧠 Academy</button></div>
 <section class="panel" aria-live="polite"><h3 id="agentTitle">Select an agent</h3><p id="agentDesc">Tap any workstation to inspect the agent's assignment, progress requirements, and connection status.</p><div id="agentTags"></div><div class="warning">Demo interface only. Agent statuses, earnings, and progress are not connected to GitHub, Railway, or broker data. No trades or business actions can be executed here.</div></section>
-<footer>CIPHER HQ · MOBILE WORLD MVP · BUILD 010 · THE LIVING HEADQUARTERS</footer></main>
+<footer>CIPHER HQ · MOBILE WORLD MVP · BUILD 011 · COUNCIL & MOBILE POLISH</footer></main>
 <script>
 const data={
 trading:{label:"TRADING",sign:"◈ MARKET INTELLIGENCE ◈",agents:[
