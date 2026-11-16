@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="night" x2="0" y2="1"><stop stop-color="#080e2e"/><stop offset=".56" stop-color="#4c217b"/><stop offset="1" stop-color="#180a33"/></linearGradient><linearGradient id="gold"><stop stop-color="#9c6224"/><stop offset=".45" stop-color="#ffe39a"/><stop offset="1" stop-color="#ab762b"/></linearGradient><linearGradient id="glass" x2="0" y2="1"><stop stop-color="#1e5a8b" stop-opacity=".65"/><stop offset="1" stop-color="#111333" stop-opacity=".95"/></linearGradient><pattern id="tri" width="45" height="38" patternUnits="userSpaceOnUse"><path d="M0 38L22 0L45 38Z" fill="none" stroke="#f7c868" stroke-opacity=".25" stroke-width="2"/></pattern><filter id="glow"><feGaussianBlur stdDeviation="6"/></filter></defs>
+<rect width="900" height="460" fill="url(#night)"/>
+<circle cx="460" cy="95" r="125" fill="#a36ad4" opacity=".2" filter="url(#glow)"/>
+<path d="M0 300V195h45V150h32v45h48V98h38v-38h23v38h44v122h26V130h36V86h21V48h14v38h34v130h38V160h44V105h34v-55h16v55h43v130h35V135h35V86h25v49h40V200h30V110h40V75h18v35h40v160h40v-70h44v100Z" fill="#101331" stroke="#d6a953" stroke-width="2"/>
+<g fill="#7ed7ff" opacity=".65"><path d="M142 130h7v11h-7zm20 0h7v11h-7zm-20 24h7v11h-7zm20 0h7v11h-7zm125-35h8v12h-8zm20 0h8v12h-8zm-20 25h8v12h-8zm20 0h8v12h-8zm182 5h8v12h-8zm20 0h8v12h-8zm140-15h8v12h-8zm20 0h8v12h-8zm-20 23h8v12h-8z"/></g>
+<path d="M0 310L450 250L900 310V460H0Z" fill="#201045" stroke="url(#gold)" stroke-width="8"/>
+<path d="M450 250V460M0 340L900 340M0 400L900 400M180 300L110 460M720 300L790 460" stroke="#dcb76e" stroke-opacity=".3" stroke-width="3"/>
+<path d="M0 0H45V460H0ZM855 0h45v460h-45Z" fill="#351357" stroke="url(#gold)" stroke-width="8"/>
+<path d="M20 0V460M880 0V460" stroke="#ffe9a0" stroke-width="4" opacity=".5"/>
+<path d="M0 25H900M0 280H900" stroke="url(#gold)" stroke-width="15"/>
+<path d="M42 35H858V270H42Z" fill="none" stroke="#ffe3a0" stroke-width="5"/>
+<path d="M45 35H855V270H45Z" fill="url(#tri)" opacity=".7"/>
+<path d="M300 35V270M600 35V270" stroke="url(#gold)" stroke-width="12"/>
+<path d="M310 40H590V250H310Z" fill="url(#glass)" opacity=".16"/>
+<path d="M450 0L490 40H410Z" fill="#d6a24d"/><path d="M450 14L470 36H430Z" fill="#2a0e4d"/>
+<path d="M100 16h130m440 0h130" stroke="#e5bb6a" stroke-width="4"/>
+</svg>
