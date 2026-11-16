@@ -187,6 +187,26 @@ header{margin-bottom:9px}
 .tabs{bottom:0;padding-bottom:max(12px,env(safe-area-inset-bottom));box-shadow:0 -8px 20px #0b061c77}
 .panel{scroll-margin-bottom:105px}
 @media(max-width:420px){.scene-viewport[data-room="briefing"] .walker.w1{left:4%}.scene-viewport[data-room="briefing"] .walker.w2{right:4%}.scene-viewport[data-room="briefing"] .walker.w3{left:17%}.scene-viewport[data-room="briefing"] .walker.w4{right:17%}.scene-viewport[data-room="briefing"] .walker .person{transform:scale(1.22)!important}.scene-viewport[data-room="briefing"] .walker.w3,.scene-viewport[data-room="briefing"] .walker.w4{top:69%}}
+
+/* BUILD 012 — readable lounge, separate room information, clean mobile composition */
+.scene-shell{overflow:hidden}
+.scene-caption{position:relative!important;bottom:auto!important;left:auto!important;right:auto!important;display:flex!important;background:linear-gradient(135deg,#321451,#1a0d36)!important;padding:13px 14px!important;min-height:83px;border:2px solid #e6b86b;border-top:0;border-radius:0 0 14px 14px;text-align:left!important;pointer-events:auto!important}
+.scene-caption strong{font-size:15px!important}
+.scene-caption small{font-size:12px!important}
+.scene-demo{font-size:10px!important}
+.scene-viewport{height:min(63dvh,510px)!important;min-height:390px!important}
+.scene-viewport[data-room="lounge"] .walker{animation:none!important;z-index:4}
+.scene-viewport[data-room="lounge"] .walker.w1{left:5%!important;top:64%!important;bottom:auto!important}
+.scene-viewport[data-room="lounge"] .walker.w2{right:5%!important;left:auto!important;top:64%!important;bottom:auto!important}
+.scene-viewport[data-room="lounge"] .walker.w3{left:25%!important;top:76%!important;bottom:auto!important}
+.scene-viewport[data-room="lounge"] .walker.w4{right:25%!important;left:auto!important;top:76%!important;bottom:auto!important}
+.scene-viewport[data-room="lounge"] .walker .person{transform:scale(1.13)!important}
+.scene-viewport[data-room="lounge"] .walker .walker-label{bottom:0!important;font-size:8px!important;max-width:75px;white-space:normal;overflow-wrap:anywhere;line-height:1.15;padding:3px 2px}
+.scene-viewport[data-room="lounge"] .walker.w3 .walker-label,.scene-viewport[data-room="lounge"] .walker.w4 .walker-label{bottom:-1px!important}
+.scene-viewport[data-room="lounge"] .walker:before{content:"";position:absolute;bottom:12px;left:7px;width:54px;height:14px;border-radius:50%;background:#1a082f99;filter:blur(4px)}
+.scene-viewport[data-room="lounge"] .walker[aria-pressed=true]{filter:drop-shadow(0 0 8px #f6cc75)}
+.room-actions{margin-top:12px!important}
+@media(max-width:420px){.scene-viewport{height:min(61dvh,485px)!important;min-height:375px!important}.scene-viewport[data-room="lounge"] .walker.w3{left:23%!important}.scene-viewport[data-room="lounge"] .walker.w4{right:23%!important}}
 </style></head><body><main class="app">
 <header><div><div class="brand">◈ CIPHER HQ</div><div class="sub">AUTONOMOUS OPERATIONS WORLD</div></div><div class="pill">◆ PROTOTYPE</div></header>
 <section class="hero"><div class="sub">COMMAND CENTER · MOBILE EDITION</div><h1>Welcome to Headquarters</h1><div class="muted">A Wakanda-inspired, Wall Street-powered agent world. Select a workstation to inspect its mission.</div><div class="metrics"><div class="metric"><b>4</b><span>Agent stations</span></div><div class="metric"><b>0</b><span>Verified live feeds</span></div><div class="metric"><b>DEMO</b><span>Data mode</span></div></div></section>
@@ -196,14 +216,14 @@ header{margin-bottom:9px}
   <div class="room-nav" id="roomNav" aria-label="Office rooms"><button data-room="work" aria-pressed="true">💻 Command Floor</button><button data-room="briefing" aria-pressed="false">📋 Council</button><button data-room="lounge" aria-pressed="false">🛋️ Lounge</button></div>
   <div class="scene-shell">
     <div class="scene-viewport" id="stations" aria-label="Interactive headquarters interior"></div>
-    <div class="scene-caption"><strong id="roomTitle">Operations Workstations</strong><small id="roomDesc">Tap an agent to inspect their mission.</small><span class="scene-demo">VISUAL DEMO · NOT CONNECTED</span></div>
   </div>
+  <div class="scene-caption"><strong id="roomTitle">Operations Workstations</strong><small id="roomDesc">Tap an agent to inspect their mission.</small><span class="scene-demo">VISUAL DEMO · NOT CONNECTED</span></div>
   <div class="room-actions"><button id="prevFloor" type="button">◀ Floor</button><button id="nextFloor" type="button">Floor ▶</button></div>
   <p class="room-note" id="roomNote">Character movement is simulated. No live agent activity is shown.</p>
 </div>
 <div class="tabs" aria-label="Headquarters floors"><button data-floor="trading" aria-pressed="true">📈 Trading</button><button data-floor="revenue" aria-pressed="false">💰 Revenue</button><button data-floor="media" aria-pressed="false">🎬 Media</button><button data-floor="academy" aria-pressed="false">🧠 Academy</button></div>
 <section class="panel" aria-live="polite"><h3 id="agentTitle">Select an agent</h3><p id="agentDesc">Tap any workstation to inspect the agent's assignment, progress requirements, and connection status.</p><div id="agentTags"></div><div class="warning">Demo interface only. Agent statuses, earnings, and progress are not connected to GitHub, Railway, or broker data. No trades or business actions can be executed here.</div></section>
-<footer>CIPHER HQ · MOBILE WORLD MVP · BUILD 011 · COUNCIL & MOBILE POLISH</footer></main>
+<footer>CIPHER HQ · MOBILE WORLD MVP · BUILD 012 · LOUNGE & READABILITY</footer></main>
 <script>
 const data={
 trading:{label:"TRADING",sign:"◈ MARKET INTELLIGENCE ◈",agents:[
