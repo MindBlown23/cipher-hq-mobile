@@ -67,6 +67,29 @@ html,body{max-width:100%;overflow-x:hidden}.app{width:100%;overflow:hidden}.floo
 @keyframes patrol{0%,16%,100%{transform:translate(0,0)}32%,47%{transform:translate(var(--x),var(--y))}63%,80%{transform:translate(calc(var(--x) * .4),calc(var(--y) * -.3))}}
 @media(prefers-reduced-motion:reduce){.walker{animation:none}}
 @media(max-width:350px){.walker.w1{--x:52px}.walker.w2{--x:-52px}.walker.w3{--x:45px}.walker.w4{--x:-45px}}
+
+/* BUILD 006 — AFROFUTURIST ROYAL COMMAND TOWER */
+.floor{background:linear-gradient(180deg,#080b22 0%,#25104b 33%,#150928 100%)!important;border:2px solid #f2c967;border-radius:22px;box-shadow:0 0 0 4px #52237a,0 0 32px #e6b64a35,inset 0 0 34px #5d2c91}
+.floor:before{inset:36% 0 0;background:linear-gradient(160deg,#0d1638c9,#4b1a7c88),repeating-linear-gradient(0deg,transparent 0 34px,#edc46623 35px),repeating-linear-gradient(90deg,transparent 0 39px,#edc46622 40px);transform:none;pointer-events:none}
+.sky{height:125px;margin:0 -3px 12px;align-items:stretch;gap:5px;overflow:hidden;border:2px solid #e9bf65;border-radius:14px 14px 4px 4px;background:radial-gradient(ellipse at 50% 0,#7145a5 0%,#171638 62%,#0b1027 100%);box-shadow:inset 0 0 24px #f1c55c38;position:relative}
+.sky:before{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(90deg,transparent 0 4%,#151633 4% 14%,transparent 14% 20%,#1b1943 20% 30%,transparent 30% 35%,#191b45 35% 46%,transparent 46% 54%,#1d1744 54% 67%,transparent 67% 73%,#161b43 73% 86%,transparent 86% 92%,#1b1a44 92%);clip-path:polygon(0 100%,0 42%,8% 42%,8% 23%,16% 23%,16% 100%,22% 100%,22% 48%,29% 48%,29% 12%,35% 12%,35% 100%,40% 100%,40% 32%,45% 32%,45% 0,50% 30%,55% 30%,55% 100%,61% 100%,61% 15%,68% 15%,68% 55%,75% 55%,75% 26%,83% 26%,83% 100%,88% 100%,88% 42%,96% 42%,96% 100%);filter:drop-shadow(0 0 8px #f1ca7a)}
+.sky:after{content:"✦  C I P H E R   C I T Y  ✦";position:absolute;bottom:7px;left:0;right:0;text-align:center;font-size:9px;letter-spacing:.22em;color:#ffe09b;text-shadow:0 0 9px #f8cd78}
+.sky .window{position:relative;z-index:1;height:100%;width:33%;border:0;border-right:3px solid #b88b4d;background:linear-gradient(90deg,transparent,#8150a31b,transparent);box-shadow:none}
+.sign{border-top:1px solid #c7a15a;border-bottom:1px solid #c7a15a;padding:10px 0;margin-bottom:12px;background:linear-gradient(90deg,transparent,#bc8d4c22,transparent);font-weight:800}
+.room-scene{border:1px solid #f6d181;box-shadow:inset 0 0 20px #a879e22b,0 0 15px #f5c96925;background:linear-gradient(110deg,#27104d,#63338c,#27104d)}
+.stations{background:radial-gradient(ellipse at 50% 45%,#623d90 0%,#2b124d 60%,#140e32 100%)!important;border:2px solid #ffdb83;box-shadow:inset 0 0 25px #dfb95a25,0 0 12px #f8cf6b22}
+.stations:before{background:repeating-linear-gradient(0deg,transparent 0 39px,#e3bd6235 40px),repeating-linear-gradient(90deg,transparent 0 39px,#e3bd622e 40px)}
+.world-zone{border:1px solid #cda25c;background:linear-gradient(135deg,#6d2d9650,#130e3e80);clip-path:polygon(6% 0,94% 0,100% 12%,100% 88%,94% 100%,6% 100%,0 88%,0 12%)}
+.world-furniture{border-color:#f9d781;box-shadow:0 6px 0 #12091f,0 0 20px #efb65c4b}
+.world-furniture.d1,.world-furniture.d2,.world-furniture.d3,.world-furniture.d4{background:linear-gradient(135deg,#3c185e,#76509a 50%,#2a114e)}
+.world-furniture.board{background:linear-gradient(130deg,#0a3058,#276c99,#0c1d46);box-shadow:inset 0 0 18px #74e3ff70,0 0 17px #72d4ff33}
+.world-furniture.sofa{background:linear-gradient(135deg,#512070,#a06abb 55%,#522477)}
+.world-furniture.table{background:radial-gradient(ellipse,#f9d77f,#ab792c)}
+.walker .walker-dot{background:#71e7eb;box-shadow:0 0 9px #7ef6f6}
+.walker .walker-label{background:#1d0a36d9;border:1px solid #e4b95b;border-radius:7px;padding:2px 0}
+.office-door{background:linear-gradient(#1e2558,#582781);box-shadow:0 0 15px #efc96e66}
+.hero{border-color:#d3a45d;box-shadow:inset 0 0 25px #e6c36a16}
+@media(max-width:420px){.sky{height:102px}.sky:after{font-size:8px}.floor{padding-left:8px;padding-right:8px}}
 </style></head><body><main class="app">
 <header><div><div class="brand">◈ CIPHER HQ</div><div class="sub">AUTONOMOUS OPERATIONS WORLD</div></div><div class="pill">◆ PROTOTYPE</div></header>
 <section class="hero"><div class="sub">COMMAND CENTER · MOBILE EDITION</div><h1>Welcome to Headquarters</h1><div class="muted">A Wakanda-inspired, Wall Street-powered agent world. Select a workstation to inspect its mission.</div><div class="metrics"><div class="metric"><b>4</b><span>Agent stations</span></div><div class="metric"><b>0</b><span>Verified live feeds</span></div><div class="metric"><b>DEMO</b><span>Data mode</span></div></div></section>
@@ -74,7 +97,7 @@ html,body{max-width:100%;overflow-x:hidden}.app{width:100%;overflow:hidden}.floo
 <div class="floor"><div class="sky"><div class="window"></div><div class="window"></div><div class="window"></div></div><div class="sign" id="floorSign">◈ MARKET INTELLIGENCE ◈</div><div class="room-nav" id="roomNav" aria-label="Office rooms"><button data-room="work" aria-pressed="true">💻 Workstations</button><button data-room="briefing" aria-pressed="false">📋 Briefing Room</button><button data-room="lounge" aria-pressed="false">🛋️ Lounge</button></div><div class="room-scene" aria-live="polite"><span class="room-icon" id="roomIcon">💻</span><div><strong id="roomTitle">Operations Workstations</strong><small id="roomDesc">Tap a character to inspect their mission.</small></div><span class="pulse"></span></div><div class="world-note">✦ INTERACTIVE WORLD PREVIEW · ANIMATIONS ARE VISUAL ONLY</div><div class="stations" id="stations"></div><div class="office-door">◈ EXIT ◈</div><div class="office-status">SIMULATED CHARACTER MOVEMENT · TAP ANY AGENT</div><div class="room-actions"><button id="prevFloor" type="button">◀ Previous floor</button><button id="nextFloor" type="button">Next floor ▶</button></div><p class="room-note" id="roomNote">This is a visual simulation. No real meetings or work sessions are triggered.</p></div>
 <div class="tabs" aria-label="Headquarters floors"><button data-floor="trading" aria-pressed="true">📈 Trading</button><button data-floor="revenue" aria-pressed="false">💰 Revenue</button><button data-floor="media" aria-pressed="false">🎬 Media</button><button data-floor="academy" aria-pressed="false">🧠 Academy</button></div>
 <section class="panel" aria-live="polite"><h3 id="agentTitle">Select an agent</h3><p id="agentDesc">Tap any workstation to inspect the agent's assignment, progress requirements, and connection status.</p><div id="agentTags"></div><div class="warning">Demo interface only. Agent statuses, earnings, and progress are not connected to GitHub, Railway, or broker data. No trades or business actions can be executed here.</div></section>
-<footer>CIPHER HQ · MOBILE WORLD MVP · BUILD 005 · WALKABLE OFFICE MAP</footer></main>
+<footer>CIPHER HQ · MOBILE WORLD MVP · BUILD 006 · ROYAL COMMAND TOWER</footer></main>
 <script>
 const data={
 trading:{label:"TRADING",sign:"◈ MARKET INTELLIGENCE ◈",agents:[
