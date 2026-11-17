@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "captured_at": "2026-11-17T19:40:00Z",
+  "source": "Railway deployment runtime logs (sanitized, manually inspected)",
+  "workers": [
+    {
+      "name": "BISHOP",
+      "last_log_at": "2026-11-17T19:18:58.660317058Z",
+      "classification": "Monitoring; no authorized orders",
+      "observation": "BISHOP_PAPER_WORKER reports OBSERVING_NOT_RECONCILED, risk_authorized=false, order_submission_enabled=false. Repeated log entries approximately every 30 minutes."
+    },
+    {
+      "name": "PIPER / OANDA practice",
+      "last_log_at": "2026-11-17T19:37:16.664721300Z",
+      "classification": "Scanning; no confirmed trade setup",
+      "observation": "OANDA-FX-Practice emitted repeated NO_TRADE scans with reason no_confirmed_setup. One earlier scan recorded an OANDA HTTP 504 candles error. No trade fill is established."
+    },
+    {
+      "name": "PIPER research",
+      "last_log_at": "2026-11-17T17:20:36.305245612Z",
+      "classification": "Research experiment logs",
+      "observation": "PIPER-Research-Only recorded forward exit-management hypotheses, including single target, partial ladder, breakeven, ATR, and swing variants. Research logs do not establish broker orders."
+    },
+    {
+      "name": "PIPER trainer",
+      "last_log_at": "2026-11-11T02:44:35.734284919Z",
+      "classification": "Historical backtest logs",
+      "observation": "PIPER-Trainer recorded multi-pair rolling walk-forward work for EUR_USD, GBP_USD, USD_JPY, USD_CAD, marked paper_only=true and orders_submitted=false."
+    },
+    {
+      "name": "SCOUT",
+      "last_log_at": "2026-11-17T14:23:10.787317236Z",
+      "classification": "Drafts generated; no outreach sent",
+      "observation": "CIPHER-Ads-SCOUT logged outreach and creative drafts requiring approval, and reported no messages or proposals sent. Pending human reviews: 0."
+    }
+  ]
+}
