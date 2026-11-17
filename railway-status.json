@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "source": "Railway project environment metadata",
+  "project": "tranquil-trust",
+  "environment": "production",
+  "captured_at": "2026-11-17T19:33:00Z",
+  "services": [
+    {
+      "name": "OANDA-FX-Practice",
+      "repository": "MindBlown23/Cipher-hq",
+      "branch": "oanda-eurusd-practice",
+      "deployment_status": "SUCCESS",
+      "deployed_at": "2026-11-14T02:50:39.288Z"
+    },
+    {
+      "name": "PIPER-Trainer",
+      "repository": "MindBlown23/Cipher-hq",
+      "branch": "piper-training-evaluation",
+      "deployment_status": "SUCCESS",
+      "deployed_at": "2026-11-11T02:27:05.375Z"
+    },
+    {
+      "name": "Cipher-hq",
+      "repository": "MindBlown23/Cipher-hq",
+      "branch": "main",
+      "deployment_status": "SUCCESS",
+      "deployed_at": "2026-11-16T02:48:14.938Z"
+    },
+    {
+      "name": "CIPHER-Ads-SCOUT",
+      "repository": "MindBlown23/Cipher-hq",
+      "branch": "cipher-ads-mvp",
+      "deployment_status": "SUCCESS",
+      "deployed_at": "2026-11-13T14:22:13.485Z"
+    },
+    {
+      "name": "PIPER-Research-Only",
+      "repository": "MindBlown23/Cipher-hq",
+      "branch": "piper-intelligent-management-research-20261117",
+      "deployment_status": "SUCCESS",
+      "deployed_at": "2026-11-17T17:02:15.591Z"
+    }
+  ]
+}
