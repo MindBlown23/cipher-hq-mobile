@@ -1,44 +1,44 @@
 {
   "schema": 1,
-  "source": "Railway project environment metadata",
+  "source": "Railway GraphQL deployment metadata (scheduled)",
   "project": "tranquil-trust",
-  "environment": "production",
-  "captured_at": "2026-11-17T19:33:00Z",
+  "environment": "project-wide (not production-filtered)",
+  "captured_at": "2026-11-17T22:56:49.170252+00:00",
   "services": [
     {
-      "name": "OANDA-FX-Practice",
-      "repository": "MindBlown23/Cipher-hq",
-      "branch": "oanda-eurusd-practice",
-      "deployment_status": "SUCCESS",
-      "deployed_at": "2026-11-14T02:50:39.288Z"
-    },
-    {
       "name": "PIPER-Trainer",
-      "repository": "MindBlown23/Cipher-hq",
-      "branch": "piper-training-evaluation",
-      "deployment_status": "SUCCESS",
-      "deployed_at": "2026-11-11T02:27:05.375Z"
+      "repository": null,
+      "branch": null,
+      "deployment_status": "UNKNOWN",
+      "deployed_at": null
     },
     {
       "name": "Cipher-hq",
-      "repository": "MindBlown23/Cipher-hq",
-      "branch": "main",
+      "repository": null,
+      "branch": null,
       "deployment_status": "SUCCESS",
       "deployed_at": "2026-11-16T02:48:14.938Z"
     },
     {
-      "name": "CIPHER-Ads-SCOUT",
-      "repository": "MindBlown23/Cipher-hq",
-      "branch": "cipher-ads-mvp",
+      "name": "PIPER-Research-Only",
+      "repository": null,
+      "branch": null,
       "deployment_status": "SUCCESS",
-      "deployed_at": "2026-11-13T14:22:13.485Z"
+      "deployed_at": "2026-11-17T21:44:25.478Z"
     },
     {
-      "name": "PIPER-Research-Only",
-      "repository": "MindBlown23/Cipher-hq",
-      "branch": "piper-intelligent-management-research-20261117",
+      "name": "OANDA-FX-Practice",
+      "repository": null,
+      "branch": null,
       "deployment_status": "SUCCESS",
-      "deployed_at": "2026-11-17T17:02:15.591Z"
+      "deployed_at": "2026-11-14T02:50:39.288Z"
+    },
+    {
+      "name": "CIPHER-Ads-SCOUT",
+      "repository": null,
+      "branch": null,
+      "deployment_status": "SUCCESS",
+      "deployed_at": "2026-11-13T14:22:13.485Z"
     }
   ]
 }
