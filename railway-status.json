@@ -3,7 +3,7 @@
   "source": "Railway GraphQL deployment metadata (scheduled)",
   "project": "tranquil-trust",
   "environment": "project-wide (not production-filtered)",
-  "captured_at": "2026-11-17T22:56:49.170252+00:00",
+  "captured_at": "2026-11-18T01:58:39.546836+00:00",
   "services": [
     {
       "name": "PIPER-Trainer",
