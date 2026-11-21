@@ -3,7 +3,7 @@
   "source": "Railway GraphQL deployment metadata (scheduled)",
   "project": "tranquil-trust",
   "environment": "project-wide (not production-filtered)",
-  "captured_at": "2026-11-20T22:54:12.048150+00:00",
+  "captured_at": "2026-11-21T03:41:40.682575+00:00",
   "services": [
     {
       "name": "PIPER-Trainer",
@@ -23,8 +23,8 @@
       "name": "PIPER-Research-Only",
       "repository": null,
       "branch": null,
-      "deployment_status": "SUCCESS",
-      "deployed_at": "2026-11-17T21:44:25.478Z"
+      "deployment_status": "CRASHED",
+      "deployed_at": "2026-11-20T23:12:17.879Z"
     },
     {
       "name": "OANDA-FX-Practice",
